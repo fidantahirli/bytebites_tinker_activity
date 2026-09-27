@@ -29,6 +29,9 @@ class Transaction:
 class Menu:
     items: list[MenuItem] = field(default_factory=list)
 
+    def add_item(self, item: MenuItem) -> None:
+        pass
+
     def filter_by_category(self, category: str) -> list[MenuItem]:
         pass
 
