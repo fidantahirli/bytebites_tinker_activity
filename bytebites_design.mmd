@@ -12,10 +12,11 @@ classDiagram
     +float popularity_rating
   }
 
-  class Menu {
-    +list items
-    +filter_by_category(String category) list
-  }
+class Menu {
+  +list items
+  +add_item(MenuItem item)
+  +filter_by_category(String category) list
+}
 
   class Transaction {
     +list items
