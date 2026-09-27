@@ -1,0 +1,27 @@
+classDiagram
+  class Customer {
+    +String name
+    +list purchase_history
+    +is_verified() bool
+  }
+
+  class MenuItem {
+    +String name
+    +float price
+    +String category
+    +float popularity_rating
+  }
+
+  class Menu {
+    +list items
+    +filter_by_category(String category) list
+  }
+
+  class Transaction {
+    +list items
+    +compute_total() float
+  }
+
+  Customer --> Transaction : purchase_history
+  Menu --> MenuItem : items
+  Transaction --> MenuItem : items
